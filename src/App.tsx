@@ -4,7 +4,7 @@ import { BasicButton } from './components';
 function App() {
   return (
     <>
-      <BasicButton></BasicButton>
+      <BasicButton label="Basic button"></BasicButton>
     </>
   );
 }
