@@ -1,5 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-peru-500: oklch(0.72 0.11 178);
+  --color-zelda-dark: #1d1821;
+  --color-zelda-brown: #433431;
+  --color-zelda-rock: #f2deab;
+  --color-zelda-sand: #e9e1d1;
+  --color-zelda-water: #008dfa;
+  --color-zelda-relic: #d40ef7;
+  --color-zelda-red: #ff4139;
+  --color-zelda-sky: #59dbfe;
+  --color-zelda-hill: #12a745;
 }

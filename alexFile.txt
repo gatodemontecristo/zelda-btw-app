@@ -76,3 +76,10 @@ npx husky install
 6. Delete de command in husky/pre-commit
 
 npm test
+
+
+/***************************************/
+How to install tailwindcss 2025?
+/***************************************/
+
+1. New tailwindcss version released vs4  

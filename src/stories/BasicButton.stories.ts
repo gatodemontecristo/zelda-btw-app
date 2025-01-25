@@ -8,9 +8,23 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    fontButton: { control: 'color' },
+  },
 } satisfies Meta<typeof BasicButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Basic: Story = {};
+export const Basic: Story = {
+  args: {
+    label: 'Basic labels',
+  },
+};
+
+export const ColorButton: Story = {
+  args: {
+    label: 'Color button',
+    fontButton: 'bg-zelda-hill',
+  },
+};
