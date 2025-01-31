@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
+  --font-symbol: 'Hyllian-Symbol', 'sans-serif';
+  --font-hyllian: 'Hyllian-Style', 'sans-serif';
   --color-zelda-dark: #1d1821;
   --color-zelda-brown: #433431;
   --color-zelda-rock: #f2deab;
