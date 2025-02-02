@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <BasicButton label="Basic button"></BasicButton>
-      <SubTitle></SubTitle>
+      <SubTitle label="Zelda" size="text-8xl"></SubTitle>
     </>
   );
 }
