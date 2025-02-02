@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { BasicButton } from '../components';
+import { BasicButton } from '../../components';
 
 const meta = {
   title: 'atoms/BasicButton',
