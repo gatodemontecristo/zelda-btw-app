@@ -12,4 +12,9 @@
   --color-zelda-red: #ff4139;
   --color-zelda-sky: #59dbfe;
   --color-zelda-hill: #12a745;
+  --color-zelda-purple: #121424;
+}
+
+.gradient-border {
+  border-image: linear-gradient(to right, transparent, #ffd700, transparent) 1;
 }

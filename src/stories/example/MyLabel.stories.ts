@@ -1,16 +1,16 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { MyLabel } from "../components/MyLabel";
+import { Meta, StoryObj } from '@storybook/react';
+import { MyLabel } from '../../components/MyLabel';
 
 const meta = {
-  title: "UI/labels/MyLabel",
+  title: 'UI/labels/MyLabel',
   component: MyLabel,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
   argTypes: {
-    size: { control: "inline-radio" },
-    fontColor: { control: "color" },
+    size: { control: 'inline-radio' },
+    fontColor: { control: 'color' },
   },
 } satisfies Meta<typeof MyLabel>;
 
@@ -19,27 +19,27 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   args: {
-    label: "Basic labels",
+    label: 'Basic labels',
   },
 };
 
 export const AllCaps: Story = {
   args: {
-    label: "All Caps label",
-    size: "normal",
+    label: 'All Caps label',
+    size: 'normal',
     allCaps: true,
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: "Secondary label",
-    color: "text-secondary",
+    label: 'Secondary label',
+    color: 'text-secondary',
   },
 };
 export const CustomColor: Story = {
   args: {
-    label: "Custom color label",
-    fontColor: "#5517ac",
+    label: 'Custom color label',
+    fontColor: '#5517ac',
   },
 };
