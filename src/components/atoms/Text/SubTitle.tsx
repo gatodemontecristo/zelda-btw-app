@@ -8,9 +8,9 @@ interface SubTitleProps {
   /**
    * Size subtitle
    */
-  size: TailwindFontSize;
+  size?: TailwindFontSize;
 }
 
-export const SubTitle = ({ label, size }: SubTitleProps) => {
+export const SubTitle = ({ label, size = 'text-2xl' }: SubTitleProps) => {
   return <p className={`${size} font-hyllian text-zelda-water`}>{label}</p>;
 };

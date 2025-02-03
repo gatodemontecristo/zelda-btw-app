@@ -38,7 +38,6 @@ type Story = StoryObj<typeof meta>;
 export const Basic: Story = {
   args: {
     label: 'Basic label',
-    size: 'text-base',
   },
 };
 
