@@ -1,4 +1,4 @@
-interface SeparatorLineProps {
+export interface SeparatorLineProps {
   /**
    * Version of the separator
    */

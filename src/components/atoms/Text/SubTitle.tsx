@@ -1,6 +1,6 @@
 import { TailwindFontSize } from '../../../helpers';
 
-interface SubTitleProps {
+export interface SubTitleProps {
   /**
    * Label subtitle
    */

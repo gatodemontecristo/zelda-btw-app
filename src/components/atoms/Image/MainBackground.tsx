@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ReactElement } from 'react';
 
-interface MainBackgroundProps {
+export interface MainBackgroundProps {
   /**
    * Image from the gallery
    */
