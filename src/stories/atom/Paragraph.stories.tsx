@@ -1,25 +1,41 @@
-import './App.css';
-import {
-  BasicButton,
-  BordeLogo,
-  MainBackground,
-  Paragraph,
-  SeparatorLine,
-  SubTitle,
-} from './components';
+import { Meta, StoryObj } from '@storybook/react';
+import { Paragraph } from '../../components';
 
-function App() {
-  return (
-    <>
-      <MainBackground>
-        <h1 className="text-6xl text-white font-bold">Hello World</h1>
-        <p className="text-white">This is a background image</p>
-        <SeparatorLine></SeparatorLine>
-      </MainBackground>
-      <BasicButton label="Basic button"></BasicButton>
-      <SubTitle label="Zelda" size="text-8xl"></SubTitle>
-      <BordeLogo imgUrl="../logo_botw.png"></BordeLogo>
-      <Paragraph>
+const meta = {
+  title: 'atoms/Paragraph',
+  component: Paragraph,
+  tags: ['autodocs'],
+  parameters: {
+    layout: 'centered',
+  },
+  argTypes: {
+    color: {
+      control: {
+        type: 'select',
+        options: [
+          'zelda-dark',
+          'zelda-brown',
+          'zelda-rock',
+          'zelda-sand',
+          'zelda-water',
+          'zelda-relic',
+          'zelda-red',
+          'zelda-sky',
+          'zelda-hill',
+          'zelda-purple',
+        ],
+      },
+    },
+  },
+} satisfies Meta<typeof Paragraph>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    children: (
+      <>
         <p>
           Embark on a reimagined adventure through Hyrule with our fresh Ul
           redesign for The Legend of Zelda: Breath of the Wild. Seamlessly
@@ -39,9 +55,7 @@ function App() {
           Zelda: Breath of the Wild awaits to elevate your gaming adventure to
           new heights.
         </p>
-      </Paragraph>
-    </>
-  );
-}
-
-export default App;
+      </>
+    ),
+  },
+};

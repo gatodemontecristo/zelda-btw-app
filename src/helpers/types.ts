@@ -13,3 +13,15 @@ export type TailwindFontSize =
   | 'text-7xl'
   | 'text-8xl'
   | 'text-9xl';
+
+export type TailwindZeldaColor =
+  | 'zelda-dark'
+  | 'zelda-brown'
+  | 'zelda-rock'
+  | 'zelda-sand'
+  | 'zelda-water'
+  | 'zelda-relic'
+  | 'zelda-red'
+  | 'zelda-sky'
+  | 'zelda-hill'
+  | 'zelda-purple';
