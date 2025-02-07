@@ -1,4 +1,3 @@
-import './App.css';
 import {
   BasicButton,
   BordeLogo,
@@ -6,11 +5,11 @@ import {
   Paragraph,
   SeparatorLine,
   SubTitle,
-} from './components';
+} from '../components';
 
-function App() {
+export const ZeldaMain = () => {
   return (
-    <>
+    <div className="flex flex-col items-center justify-center">
       <MainBackground>
         <h1 className="text-6xl text-white font-bold">Hello World</h1>
         <p className="text-white">This is a background image</p>
@@ -40,8 +39,6 @@ function App() {
           new heights.
         </p>
       </Paragraph>
-    </>
+    </div>
   );
-}
-
-export default App;
+};

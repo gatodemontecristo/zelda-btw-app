@@ -1,4 +1,4 @@
-interface BordeLogoProps {
+export interface BordeLogoProps {
   /**
    * Url image
    */
