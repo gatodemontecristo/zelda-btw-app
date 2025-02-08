@@ -1,16 +1,20 @@
-import {
-  BasicButton,
-  BordeLogo,
-  MainBackground,
-  Paragraph,
-  SeparatorLine,
-  SubTitle,
-} from '../components';
+import MainSection from '../components/molecules/MainSection';
 
 export const ZeldaMain = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <MainBackground>
+    <div className="flex flex-col text-center items-center justify-center bg-zelda-purple">
+      <MainSection shadowSize="full">
+        <MainSection.Logo
+          imgUrl="../logo_botw.png"
+          size={30}
+        ></MainSection.Logo>
+        <MainSection.Title
+          label="Encliclopedia"
+          size="text-7xl"
+        ></MainSection.Title>
+        <MainSection.Separator width={30}></MainSection.Separator>
+      </MainSection>
+      {/* <MainBackground>
         <h1 className="text-6xl text-white font-bold">Hello World</h1>
         <p className="text-white">This is a background image</p>
         <SeparatorLine></SeparatorLine>
@@ -38,7 +42,7 @@ export const ZeldaMain = () => {
           Zelda: Breath of the Wild awaits to elevate your gaming adventure to
           new heights.
         </p>
-      </Paragraph>
+      </Paragraph> */}
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 export interface BordeLogoProps {
   /**
    * Url image
@@ -10,14 +12,18 @@ export interface BordeLogoProps {
 }
 export const BordeLogo = ({ imgUrl, size = 40 }: BordeLogoProps) => {
   return (
-    <div className="flex justify-center items-center relative py-8">
+    <div className="flex flex-row w-[70%] justify-center items-center relative py-8">
       <div
-        className="absolute inset-0 border-t-8 border-b-8 border-yellow-500 gradient-border
+        className="absolute inset-0 border-t-8 border-b-8 border-amber-300 gradient-border
 
        
         bg-gradient-to-r from-transparent via-gray-600/70 to-transparent "
       ></div>
-      <img className={`relative z-10 w-[${size}%]`} src={imgUrl} alt="Logo" />
+      <img
+        className={clsx('relative z-10', `w-[${String(size)}%]`)}
+        src={imgUrl}
+        alt="Logo"
+      />
     </div>
   );
 };
