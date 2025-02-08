@@ -9,7 +9,7 @@ export const ZeldaMain = () => {
           size={30}
         ></MainSection.Logo>
         <MainSection.Title
-          label="Encliclopedia"
+          label="Hyrule Compendium (BTW)"
           size="text-7xl"
         ></MainSection.Title>
         <MainSection.Separator width={30}></MainSection.Separator>
