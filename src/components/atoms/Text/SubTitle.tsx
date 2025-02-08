@@ -12,5 +12,5 @@ export interface SubTitleProps {
 }
 
 export const SubTitle = ({ label, size = 'text-2xl' }: SubTitleProps) => {
-  return <p className={`${size} font-hyllian text-zelda-water`}>{label}</p>;
+  return <p className={`${size} font-hyllian text-zelda-history`}>{label}</p>;
 };

@@ -13,7 +13,7 @@ export interface MainBackgroundProps {
   /**
    * Shadow size
    */
-  shadowSize?: 'sm' | 'md' | 'lg';
+  shadowSize?: 'sm' | 'md' | 'lg' | 'full';
   /**
    * Color gradient
    */
@@ -31,8 +31,10 @@ export const MainBackground = ({
         return 'h-1/4';
       case 'md':
         return 'h-1/3';
+      case 'lg':
+        return 'h-1/3';
       default:
-        return 'h-1/2';
+        return 'h-full';
     }
   };
   const getImage = (image: string) => {
@@ -47,16 +49,16 @@ export const MainBackground = ({
   };
 
   return (
-    <div className="absolute left-0 top-0 h-screen w-screen  flex  items-center justify-center -z-10 ">
+    <div className="absolute overflow-x-hidden left-0 top-0 h-screen w-screen  flex flex-col items-center justify-center  ">
       <img
         className="absolute inset-0 object-cover w-full h-full z-0 "
         src={getImage(image)}
         alt="Background"
       />
-      <div className="relative z-10">{children}</div>
+      <div className="relative z-10 flex flex-col items-center">{children}</div>
       <div
         className={clsx(
-          'absolute bottom-0 left-0 w-full  bg-gradient-to-t from-black to-transparent  py-4 z-30',
+          'absolute bottom-0 left-0 w-full  bg-gradient-to-t from-black to-transparent  py-4 z-5',
           getShadowSize(shadowSize), // This is the shadow size
           'from-' + color,
         )}
