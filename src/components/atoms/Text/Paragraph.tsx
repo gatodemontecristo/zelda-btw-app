@@ -24,7 +24,7 @@ export const Paragraph = ({
   size = 'base',
 }: ParagraphProps) => {
   return (
-    <div className="flex flex-col text-center items-center justify-center w-full gap-3">
+    <div className="flex flex-col text-center items-center justify-center w-full gap-3 z-40">
       {React.Children.map(children, (child) =>
         child
           ? React.cloneElement(child, {

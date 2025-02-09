@@ -7,7 +7,7 @@ export interface SeparatorLineProps {
 }
 export const SeparatorLine = ({
   version = 'version01',
-  width = 70,
+  width = 20,
 }: SeparatorLineProps) => {
   const getSeparator = (version: string) => {
     switch (version) {
@@ -22,9 +22,11 @@ export const SeparatorLine = ({
   return (
     <div className="flex flex-row w-full items-center justify-center">
       <img
-        className={`w-[${width}%]`}
         src={getSeparator(version)}
         alt="separator"
+        style={{
+          width: width + '%',
+        }}
       />
     </div>
   );

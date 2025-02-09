@@ -12,7 +12,11 @@ export interface BordeLogoProps {
 }
 export const BordeLogo = ({ imgUrl, size = 40 }: BordeLogoProps) => {
   return (
-    <div className="flex flex-row w-[70%] justify-center items-center relative py-8">
+    <div
+      className={clsx(
+        'flex flex-row w-[70%] justify-center items-center relative py-8',
+      )}
+    >
       <div
         className="absolute inset-0 border-t-8 border-b-8 border-amber-300 gradient-border
 
@@ -20,7 +24,10 @@ export const BordeLogo = ({ imgUrl, size = 40 }: BordeLogoProps) => {
         bg-gradient-to-r from-transparent via-gray-600/70 to-transparent "
       ></div>
       <img
-        className={clsx('relative z-10', `w-[${String(size)}%]`)}
+        className={clsx('relative z-10')}
+        style={{
+          width: size + '%',
+        }}
         src={imgUrl}
         alt="Logo"
       />
