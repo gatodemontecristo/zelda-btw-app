@@ -1,4 +1,5 @@
 import { TailwindFontSize } from '../../../helpers';
+import clsx from 'clsx';
 
 export interface SubTitleProps {
   /**
@@ -9,8 +10,17 @@ export interface SubTitleProps {
    * Size subtitle
    */
   size?: TailwindFontSize;
+  className?: string;
 }
 
-export const SubTitle = ({ label, size = 'text-2xl' }: SubTitleProps) => {
-  return <p className={`${size} font-hyllian text-zelda-history`}>{label}</p>;
+export const SubTitle = ({
+  label,
+  size = 'text-2xl',
+  className,
+}: SubTitleProps) => {
+  return (
+    <p className={clsx('font-hyllian text-zelda-history', size, className)}>
+      {label}
+    </p>
+  );
 };

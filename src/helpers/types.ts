@@ -24,4 +24,15 @@ export type TailwindZeldaColor =
   | 'zelda-red'
   | 'zelda-sky'
   | 'zelda-hill'
-  | 'zelda-purple';
+  | 'zelda-purple'
+  | 'zelda-history';
+
+export type SpecialSize =
+  | 'base'
+  | 'lg'
+  | 'xl'
+  | '2xl'
+  | '3xl'
+  | '4xl'
+  | '5xl'
+  | '6xl';
