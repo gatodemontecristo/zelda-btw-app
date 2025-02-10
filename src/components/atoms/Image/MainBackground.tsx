@@ -58,7 +58,7 @@ export const MainBackground = ({
       <div className="relative z-10 flex flex-col items-center">{children}</div>
       <div
         className={clsx(
-          `absolute bottom-0 left-0 w-full  bg-gradient-to-t from-${color} to-transparent  py-4 z-5`,
+          `absolute bottom-0 left-0 w-full  bg-gradient-to-t  to-transparent  py-4 z-5`,
           getShadowSize(shadowSize),
           'from-' + color, // This is the shadow size
         )}
