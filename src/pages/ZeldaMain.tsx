@@ -1,8 +1,10 @@
 import MainSection from '../components/molecules/MainSection';
-import { Paragraph } from '../components/atoms/Text/Paragraph';
 import UnderlinedTitle from '../components/molecules/UnderlinedTitle';
+import { useState } from 'react';
+import { ButtonGroup, Paragraph } from '../components';
 
 export const ZeldaMain = () => {
+  const [selectedOption, setSelectedOption] = useState('creatures');
   return (
     <div className="flex flex-col text-center items-center justify-center bg-zelda-purple overflow-x-hidden">
       <MainSection shadowSize="full" color="zelda-purple">
@@ -50,6 +52,40 @@ export const ZeldaMain = () => {
           version="version02"
         ></UnderlinedTitle.Separator>
       </UnderlinedTitle>
+
+      <ButtonGroup
+        options={[
+          {
+            label: 'Creatures',
+            value: 'creatures',
+            imgUrl: '../icons/creatures.png',
+          },
+          {
+            label: 'Equiptment',
+            value: 'equipment',
+            imgUrl: '../icons/equipment.png',
+          },
+          {
+            label: 'Materials',
+            value: 'materials',
+            imgUrl: '../icons/materials.png',
+          },
+          {
+            label: 'Monsters',
+            value: 'monsters',
+            imgUrl: '../icons/monsters.png',
+          },
+          {
+            label: 'Treasure',
+            value: 'treasure',
+            imgUrl: '../icons/treasure.png',
+          },
+        ]}
+        selectedValue={selectedOption}
+        onChange={setSelectedOption}
+        color="blue-900"
+        size="2xl"
+      />
     </div>
   );
 };
