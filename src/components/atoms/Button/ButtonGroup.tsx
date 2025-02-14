@@ -16,9 +16,11 @@ export const ButtonGroup: React.FC<ButtonGroupProps> = ({
   options,
   selectedValue,
   onChange,
-  color = 'blue-500',
   size = 'base',
 }) => {
+  const getColorButton = () => {
+    return 'bg-blue-900';
+  };
   return (
     <div className="inline-flex rounded-md shadow-sm" role="group">
       {options.map((option, index) => (
@@ -29,7 +31,7 @@ export const ButtonGroup: React.FC<ButtonGroupProps> = ({
             'text-' + size,
             'px-6 py-3 font-medium flex flex-row gap-2 jusntify-center items-center',
             selectedValue === option.value
-              ? `bg-${color} text-white`
+              ? ` text-white ` + getColorButton()
               : 'bg-white text-gray-700 hover:bg-gray-100',
             index === 0 ? 'rounded-l-md' : '',
             index === options.length - 1 ? 'rounded-r-md' : '',

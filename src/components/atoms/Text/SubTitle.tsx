@@ -11,16 +11,26 @@ export interface SubTitleProps {
    */
   size?: TailwindFontSize;
   className?: string;
+  /**
+   * Extra subtitle
+   */
+  secondaryTitle?: string;
 }
 
 export const SubTitle = ({
   label,
   size = 'text-2xl',
   className,
+  secondaryTitle,
 }: SubTitleProps) => {
   return (
-    <p className={clsx('font-hyllian text-zelda-history', size, className)}>
-      {label}
-    </p>
+    <div className="flex flex-col items-center">
+      <p className={clsx('font-hyllian text-zelda-history', size, className)}>
+        {label}
+      </p>
+      {secondaryTitle && (
+        <p className=" text-zelda-history text-sm">{secondaryTitle}</p>
+      )}
+    </div>
   );
 };
