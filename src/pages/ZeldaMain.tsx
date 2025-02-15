@@ -1,7 +1,7 @@
 import MainSection from '../components/molecules/MainSection';
 import UnderlinedTitle from '../components/molecules/UnderlinedTitle';
 import { useState } from 'react';
-import { ButtonGroup, Paragraph } from '../components';
+import { ButtonGroup, CardResource, Paragraph } from '../components';
 
 export const ZeldaMain = () => {
   const [selectedOption, setSelectedOption] = useState('creatures');
@@ -86,6 +86,7 @@ export const ZeldaMain = () => {
         color="blue-900"
         size="2xl"
       />
+      <CardResource></CardResource>
     </div>
   );
 };
