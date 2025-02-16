@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.0",
+    "@tanstack/react-query": "^5.66.3",
+    "@tanstack/react-query-devtools": "^5.66.3",
     "clsx": "^2.1.1",
     "nanoid": "^5.0.9",
     "react": "^18.3.1",
@@ -37,6 +39,7 @@
     "@storybook/react": "8.6.0-alpha.0",
     "@storybook/react-vite": "8.6.0-alpha.0",
     "@storybook/test": "8.6.0-alpha.0",
+    "@tanstack/eslint-plugin-query": "^5.66.1",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react-swc": "^3.5.0",
