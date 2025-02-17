@@ -1,12 +1,17 @@
 import MainSection from '../components/molecules/MainSection';
 import UnderlinedTitle from '../components/molecules/UnderlinedTitle';
 import { useState } from 'react';
+import { nanoid } from 'nanoid';
 import { ButtonGroup, CardResource, Paragraph } from '../components';
+import { useResources } from '../hooks';
+import { BOTWCompendiumProps, typeCompendium } from '../helpers';
 
 export const ZeldaMain = () => {
-  const [selectedOption, setSelectedOption] = useState('creatures');
+  const [selectedOption, setSelectedOption] = useState('monsters');
+  const { compendiumQuery } = useResources(selectedOption);
+  console.log(compendiumQuery.data);
   return (
-    <div className="flex flex-col text-center items-center justify-center bg-zelda-purple overflow-x-hidden">
+    <div className="flex flex-col gap-20 text-center items-center justify-center bg-zelda-purple overflow-x-hidden">
       <MainSection shadowSize="full" color="zelda-purple">
         <MainSection.Logo
           imgUrl="../logo_botw.png"
@@ -54,39 +59,22 @@ export const ZeldaMain = () => {
       </UnderlinedTitle>
 
       <ButtonGroup
-        options={[
-          {
-            label: 'Creatures',
-            value: 'creatures',
-            imgUrl: '../icons/creatures.png',
-          },
-          {
-            label: 'Equiptment',
-            value: 'equipment',
-            imgUrl: '../icons/equipment.png',
-          },
-          {
-            label: 'Materials',
-            value: 'materials',
-            imgUrl: '../icons/materials.png',
-          },
-          {
-            label: 'Monsters',
-            value: 'monsters',
-            imgUrl: '../icons/monsters.png',
-          },
-          {
-            label: 'Treasure',
-            value: 'treasure',
-            imgUrl: '../icons/treasure.png',
-          },
-        ]}
+        options={typeCompendium}
         selectedValue={selectedOption}
         onChange={setSelectedOption}
         color="blue-900"
         size="2xl"
       />
-      <CardResource></CardResource>
+      <div className="flex flex-wrap justify-center gap-4">
+        {compendiumQuery.data &&
+          compendiumQuery.data.map((resource: BOTWCompendiumProps) => (
+            <CardResource
+              key={nanoid()}
+              className="w-1/5 gap-2 "
+              resource={resource}
+            ></CardResource>
+          ))}
+      </div>
     </div>
   );
 };

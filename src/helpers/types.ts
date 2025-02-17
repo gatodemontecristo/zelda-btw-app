@@ -36,3 +36,31 @@ export type SpecialSize =
   | '4xl'
   | '5xl'
   | '6xl';
+
+export const typeCompendium = [
+  {
+    label: 'Creatures',
+    value: 'creatures',
+    imgUrl: '../icons/creatures.png',
+  },
+  {
+    label: 'Equiptment',
+    value: 'equipment',
+    imgUrl: '../icons/equipment.png',
+  },
+  {
+    label: 'Materials',
+    value: 'materials',
+    imgUrl: '../icons/materials.png',
+  },
+  {
+    label: 'Monsters',
+    value: 'monsters',
+    imgUrl: '../icons/monsters.png',
+  },
+  {
+    label: 'Treasure',
+    value: 'treasure',
+    imgUrl: '../icons/treasure.png',
+  },
+];
