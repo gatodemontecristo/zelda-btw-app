@@ -1,15 +1,31 @@
 import MainSection from '../components/molecules/MainSection';
 import UnderlinedTitle from '../components/molecules/UnderlinedTitle';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
-import { ButtonGroup, CardResource, Paragraph } from '../components';
-import { useResources } from '../hooks';
+import {
+  ButtonGroup,
+  CardResource,
+  CardSkeleton,
+  Pagination,
+  Paragraph,
+} from '../components';
+import { usePagination, useResources } from '../hooks';
 import { BOTWCompendiumProps, typeCompendium } from '../helpers';
 
 export const ZeldaMain = () => {
   const [selectedOption, setSelectedOption] = useState('monsters');
   const { compendiumQuery } = useResources(selectedOption);
-  console.log(compendiumQuery.data);
+
+  const itemsPerPage = 12;
+  const { currentData, currentPage, maxPage, next, prev, jump } = usePagination(
+    compendiumQuery.data || [],
+    itemsPerPage,
+  );
+
+  useEffect(() => {
+    currentData().length > 0 && jump(1);
+  }, [selectedOption]);
+
   return (
     <div className="flex flex-col gap-20 text-center items-center justify-center bg-zelda-purple overflow-x-hidden">
       <MainSection shadowSize="full" color="zelda-purple">
@@ -66,15 +82,31 @@ export const ZeldaMain = () => {
         size="2xl"
       />
       <div className="flex flex-wrap justify-center gap-4">
-        {compendiumQuery.data &&
-          compendiumQuery.data.map((resource: BOTWCompendiumProps) => (
-            <CardResource
-              key={nanoid()}
-              className="w-1/5 gap-2 "
-              resource={resource}
-            ></CardResource>
+        {compendiumQuery.isLoading &&
+          Array.from({ length: 12 }).map(() => (
+            <CardSkeleton className="w-1/5 border border-zelda-history rounded-lg"></CardSkeleton>
           ))}
+
+        {currentData() &&
+          (currentData() as BOTWCompendiumProps[]).map(
+            (resource: BOTWCompendiumProps) => (
+              <CardResource
+                key={nanoid()}
+                className="w-1/5 gap-2"
+                resource={resource}
+              ></CardResource>
+            ),
+          )}
       </div>
+      {currentData() && (
+        <Pagination
+          currentPage={currentPage}
+          maxPage={maxPage}
+          onNext={next}
+          onPrev={prev}
+          onJump={jump}
+        />
+      )}
     </div>
   );
 };
