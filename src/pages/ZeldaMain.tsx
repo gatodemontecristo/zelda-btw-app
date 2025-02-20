@@ -23,8 +23,8 @@ export const ZeldaMain = () => {
   );
 
   useEffect(() => {
-    currentData().length > 0 && jump(1);
-  }, [selectedOption]);
+    jump(1);
+  }, [compendiumQuery.data]);
 
   return (
     <div className="flex flex-col gap-20 text-center items-center justify-center bg-zelda-purple overflow-x-hidden">

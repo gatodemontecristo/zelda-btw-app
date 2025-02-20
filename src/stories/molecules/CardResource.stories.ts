@@ -2,7 +2,7 @@ import { CardResource } from '../../components';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'atoms/CardResource',
+  title: 'molecules/CardResource',
   component: CardResource,
   tags: ['autodocs'],
   parameters: {
