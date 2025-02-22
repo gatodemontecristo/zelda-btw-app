@@ -1,4 +1,3 @@
-import MainSection from '../components/molecules/MainSection';
 import UnderlinedTitle from '../components/molecules/UnderlinedTitle';
 import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
@@ -27,19 +26,7 @@ export const ZeldaMain = () => {
   }, [compendiumQuery.data]);
 
   return (
-    <div className="flex flex-col gap-20 text-center items-center justify-center bg-zelda-purple overflow-x-hidden">
-      <MainSection shadowSize="full" color="zelda-purple">
-        <MainSection.Logo
-          imgUrl="../logo_botw.png"
-          size={40}
-        ></MainSection.Logo>
-        <MainSection.Title
-          label="Hyrule Compendium (BTW)"
-          size="text-5xl"
-          className="mt-4"
-        ></MainSection.Title>
-        <MainSection.Separator width={40}></MainSection.Separator>
-      </MainSection>
+    <div className="flex flex-col gap-20 text-center items-center justify-center ">
       <Paragraph color="zelda-history" size="xl">
         <p>
           Embark on a reimagined adventure through Hyrule with our fresh Ul
