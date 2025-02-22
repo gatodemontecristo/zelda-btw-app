@@ -1,6 +1,6 @@
 import '../../../index.css';
 
-interface BasicButtonProps {
+export interface BasicButtonProps {
   /**
    * Label button
    */
@@ -28,7 +28,7 @@ export const BasicButton = ({
   return (
     <button
       className={`rounded-full text-white flex flex-row font-bold shadow-lg ${fontButton} ${className} ease-in-out 
-            hover:bg-white hover:text-black transform transition-all duration-300 px-4 py-2 `}
+            hover:bg-white hover:text-black transform transition-all duration-300 `}
     >
       {label && <p>{label}</p>}
       {imgButton && <img src={imgButton} className="size-[30px]"></img>}

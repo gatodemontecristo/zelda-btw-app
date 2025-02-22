@@ -51,7 +51,7 @@ export const CardResource = ({
       </div>
       <BasicButton
         imgButton="./icons/eye.png"
-        className="bg-zelda-history hover:bg-black!"
+        className="bg-zelda-history px-4 py-2  hover:bg-black!"
       ></BasicButton>
     </div>
   );
