@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import '../../../index.css';
 
 export interface BasicButtonProps {
@@ -17,6 +18,10 @@ export interface BasicButtonProps {
    * Extra classname button
    */
   className?: string;
+  /**
+   * ClassName Icon
+   */
+  classButton?: string;
 }
 
 export const BasicButton = ({
@@ -24,14 +29,15 @@ export const BasicButton = ({
   fontButton = 'bg-black',
   imgButton,
   className,
+  classButton,
 }: BasicButtonProps) => {
   return (
     <button
       className={`rounded-full text-white flex flex-row font-bold shadow-lg ${fontButton} ${className} ease-in-out 
-            hover:bg-white hover:text-black transform transition-all duration-300 `}
+            hover:bg-white hover:text-black transform transition-all duration-300 gap-2 items-center justify-center`}
     >
+      {imgButton && <img src={imgButton} className={clsx(classButton)}></img>}
       {label && <p>{label}</p>}
-      {imgButton && <img src={imgButton} className="size-[30px]"></img>}
     </button>
   );
 };

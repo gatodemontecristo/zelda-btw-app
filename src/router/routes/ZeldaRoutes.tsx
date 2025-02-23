@@ -24,7 +24,8 @@ export const ZeldaRoutes = () => {
       >
         <FooterZelda.Button
           imgButton="../icons/github.png"
-          className="bg-zelda-hill p-5 hover:bg-black!"
+          className="bg-zelda-hill p-5 hover:bg-black! "
+          classButton="size-15"
         ></FooterZelda.Button>
       </FooterZelda>
     </div>
