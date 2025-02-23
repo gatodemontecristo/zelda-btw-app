@@ -23,7 +23,7 @@ export const ZeldaRoutes = () => {
         location={'Lima, Perú (2025)'}
       >
         <FooterZelda.Button
-          imgButton="./icons/github.png"
+          imgButton="../icons/github.png"
           className="bg-zelda-hill p-5 hover:bg-black!"
         ></FooterZelda.Button>
       </FooterZelda>
