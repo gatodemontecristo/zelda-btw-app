@@ -1,12 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-
-const getCompendiumBOTW = async (type: string): Promise<any> => {
-  const resp = await fetch(
-    'https://botw-compendium.herokuapp.com/api/v3/compendium/category/' + type,
-  ).then((resp) => resp.json());
-
-  return resp.data;
-};
+import { getCompendiumBOTW } from './actions';
 
 export const useResources = (type: string) => {
   const compendiumQuery = useQuery({

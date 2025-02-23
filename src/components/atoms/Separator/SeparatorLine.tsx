@@ -12,11 +12,11 @@ export const SeparatorLine = ({
   const getSeparator = (version: string) => {
     switch (version) {
       case 'version01':
-        return './separator/arrow_separator.png';
+        return '../separator/arrow_separator.png';
       case 'version02':
-        return './separator/gold_separator.png';
+        return '../separator/gold_separator.png';
       default:
-        return './separator/elegant_separator.png';
+        return '../separator/elegant_separator.png';
     }
   };
   return (
