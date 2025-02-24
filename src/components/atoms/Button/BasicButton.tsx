@@ -22,6 +22,10 @@ export interface BasicButtonProps {
    * ClassName Icon
    */
   classButton?: string;
+  /**
+   * Click Button
+   */
+  fnClickButton: () => void;
 }
 
 export const BasicButton = ({
@@ -30,9 +34,11 @@ export const BasicButton = ({
   imgButton,
   className,
   classButton,
+  fnClickButton,
 }: BasicButtonProps) => {
   return (
     <button
+      onClick={fnClickButton}
       className={`rounded-full text-white flex flex-row font-bold shadow-lg ${fontButton} ${className} ease-in-out 
             hover:bg-white hover:text-black transform transition-all duration-300 gap-2 items-center justify-center`}
     >
