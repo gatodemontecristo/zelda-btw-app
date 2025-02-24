@@ -2,6 +2,9 @@ import { Outlet } from 'react-router-dom';
 import { FooterZelda } from '../../components';
 import MainSection from '../../components/molecules/MainSection';
 export const ZeldaRoutes = () => {
+  const onNavigateGithub = () => {
+    window.open('https://github.com/gatodemontecristo/zelda-btw-app', '_blank');
+  };
   return (
     <div className="flex flex-col  gap-10 bg-zelda-purple overflow-x-hidden">
       <MainSection shadowSize="full" color="zelda-purple">
@@ -26,6 +29,7 @@ export const ZeldaRoutes = () => {
           imgButton="../icons/github.png"
           className="bg-zelda-hill p-5 hover:bg-black! "
           classButton="size-15"
+          fnClickButton={onNavigateGithub}
         ></FooterZelda.Button>
       </FooterZelda>
     </div>

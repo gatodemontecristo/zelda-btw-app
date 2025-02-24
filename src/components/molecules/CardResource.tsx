@@ -2,6 +2,7 @@ import UnderlinedTitle from './UnderlinedTitle';
 import { BasicButton } from '../atoms/Button/BasicButton';
 import { BOTWCompendiumProps } from '../../helpers';
 import clsx from 'clsx';
+import { useNavigate } from 'react-router';
 
 export const CardResource = ({
   resource,
@@ -10,6 +11,10 @@ export const CardResource = ({
   resource: BOTWCompendiumProps;
   className?: string;
 }) => {
+  const navigate = useNavigate();
+  const onNavigateDetail = () => {
+    navigate(`/detail/${resource.id}`);
+  };
   return (
     <div
       className={clsx(
@@ -52,6 +57,8 @@ export const CardResource = ({
       <BasicButton
         imgButton="./icons/eye.png"
         className="bg-zelda-history px-4 py-2  hover:bg-black!"
+        fnClickButton={onNavigateDetail}
+        classButton="size-7"
       ></BasicButton>
     </div>
   );

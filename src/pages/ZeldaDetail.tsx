@@ -1,4 +1,4 @@
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { useDetail } from '../hooks';
 import { BasicButton } from '../components';
 
@@ -22,7 +22,7 @@ const SeparatedList = ({ items, icon }: SeparatedListProps) => {
 };
 const ItemList = ({ items, icon }: SeparatedListProps) => {
   return (
-    <div className="flex flex-row gap-2 text-base font-extralight">
+    <div className="flex flex-row gap-2 text-xl font-extralight">
       {items.map((item) => (
         <div className="flex flex-row items-center">
           <img src={icon} alt="separator icon" className="size-8" />
@@ -39,8 +39,8 @@ interface CategoryDetailProps {
 const CategoryDetail = ({ category, img }: CategoryDetailProps) => {
   return (
     <div className="flex flex-row w-full justify-end items-center gap-2 pe-5">
-      <p className="text-white text-2xl font-bold font-hyllian">{category}</p>
-      <img src={img} className="size-15" />
+      <p className="text-white text-3xl font-bold font-hyllian">{category}</p>
+      <img src={img} className="size-17" />
     </div>
   );
 };
@@ -59,9 +59,20 @@ export const ZeldaDetail = () => {
   const { zeldaId } = useParams();
   const { detailQuery } = useDetail(Number(zeldaId) || 0);
   const { data, isLoading } = detailQuery;
+  const navigate = useNavigate();
+  const onNavigateHome = () => {
+    navigate('/main');
+  };
   if (isLoading) {
-    console.log(data);
-    return <p>Loading...</p>;
+    return (
+      <div className="flex flex-col w-full items-center relative h-[80vh] justify-center">
+        <img src="/loader/preload-owl2.png" className="w-1/5 z-10"></img>
+        <img
+          src="/loader/preload-dots.png"
+          className="absolute w-1/5 animate-spin"
+        ></img>
+      </div>
+    );
   }
   return (
     <>
@@ -106,22 +117,22 @@ export const ZeldaDetail = () => {
           {/* Images in the corners */}
           <img
             src="../frame/deco-corner.png"
-            className="absolute top-1 left-1 size-17 -scale-y-100"
+            className="absolute top-1 left-1 size-20 -scale-y-100"
             alt="Corner Image"
           />
           <img
             src="../frame/deco-corner.png"
-            className="absolute top-1 right-1 size-17 transform -scale-x-100 -scale-y-100"
+            className="absolute top-1 right-1 size-20 transform -scale-x-100 -scale-y-100"
             alt="Corner Image"
           />
           <img
             src="../frame/deco-corner.png"
-            className="absolute bottom-1 left-1 size-17 "
+            className="absolute bottom-1 left-1 size-20 "
             alt="Corner Image"
           />
           <img
             src="../frame/deco-corner.png"
-            className="absolute bottom-1 right-1 size-17 transform -scale-x-100"
+            className="absolute bottom-1 right-1 size-20 transform -scale-x-100"
             alt="Corner Image"
           />
         </div>
@@ -135,6 +146,7 @@ export const ZeldaDetail = () => {
           label="Back to home"
           className="w-[220px] p-5 bg-zelda-history px-4 py-4 hover:bg-black! hover:text-white!"
           classButton="size-5"
+          fnClickButton={onNavigateHome}
         ></BasicButton>
       </div>
     </>
