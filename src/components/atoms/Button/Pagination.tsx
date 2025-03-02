@@ -1,6 +1,7 @@
 // filepath: /Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/Pagination.tsx
 import React from 'react';
 import clsx from 'clsx';
+import { nanoid } from 'nanoid';
 
 interface PaginationProps {
   currentPage: number;
@@ -36,7 +37,7 @@ export const Pagination: React.FC<PaginationProps> = ({
       </button>
       {[...Array(maxPage)].map((_, index) => (
         <button
-          key={index}
+          key={nanoid()}
           onClick={() => onJump(index + 1)}
           className={clsx(
             'px-4 py-2  rounded-full',

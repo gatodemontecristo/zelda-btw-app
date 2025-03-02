@@ -61,7 +61,10 @@ export default tseslint.config(
 
 4. Configure Husky: Initialize Husky and add a pre-commit hook:
 
-npx husky install
+npx husky install (deprecated)
+
+yarn add --dev husky
+
 
 5.Configure lint-staged: Add the following configuration to your package.json:
 
@@ -72,6 +75,9 @@ npx husky install
   ]
 }
 
+5.1 Init Husky
+
+npx husky init
 
 6. Delete de command in husky/pre-commit
 
