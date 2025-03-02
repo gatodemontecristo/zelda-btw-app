@@ -71,7 +71,10 @@ export const ZeldaMain = () => {
       <div className="flex flex-wrap justify-center gap-4">
         {compendiumQuery.isLoading &&
           Array.from({ length: 12 }).map(() => (
-            <CardSkeleton className="w-1/5 border border-zelda-history rounded-lg"></CardSkeleton>
+            <CardSkeleton
+              key={nanoid()}
+              className="w-1/5 border border-zelda-history rounded-lg"
+            ></CardSkeleton>
           ))}
 
         {currentData() &&

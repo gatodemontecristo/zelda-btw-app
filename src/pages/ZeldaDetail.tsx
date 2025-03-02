@@ -1,34 +1,89 @@
 import { useNavigate, useParams } from 'react-router';
 import { useDetail } from '../hooks';
 import { BasicButton } from '../components';
+import { nanoid } from 'nanoid';
 
+interface GetHeartsProps {
+  hearts?: number;
+}
+const GetHearts = ({ hearts }: GetHeartsProps) => {
+  if (!hearts || hearts == 0)
+    return <p className="text-white italic">-No data-</p>;
+  const totalHearts = Math.floor(hearts);
+  const decimalHearts = hearts % 2;
+  return (
+    <div className="flex flex-row w-full justify-center items-center gap-2 pe-5">
+      {Array.from({ length: totalHearts }).map(() => (
+        <div className="w-[40px] h-[40px] overflow-hidden" key={nanoid()}>
+          <img src="/icons/heart.png" alt="Imagen recortada" />
+        </div>
+      ))}
+      {decimalHearts > 0 && (
+        <div className="w-[22px] h-[40px] overflow-hidden">
+          <img
+            src="/icons/heart.png"
+            alt="Imagen recortada"
+            className="w-[40px] h-[40px]  object-cover object-left"
+          />
+        </div>
+      )}
+    </div>
+  );
+};
 interface SeparatedListProps {
-  items: string[];
+  items?: string[];
   icon: string;
 }
 const SeparatedList = ({ items, icon }: SeparatedListProps) => {
   return (
-    <div className="flex items-center space-x-2 font-medium ">
-      {items.map((item, index) => (
-        <>
-          <span className="text-white">{item}</span>
-          {index < items.length - 1 && (
-            <img src={icon} alt="separator icon" className="w-4 h-6" />
-          )}
-        </>
-      ))}
+    <div className="flex items-center space-x-2 font-medium  flex-wrap justify-center">
+      {items && items.length > 0 ? (
+        items.map((item, index) => (
+          <div key={nanoid()} className="flex flex-row gap-2">
+            <span className="text-white">{item}</span>
+            {index < items.length - 1 && (
+              <img src={icon} alt="separator icon" className="w-4 h-6" />
+            )}
+          </div>
+        ))
+      ) : (
+        <span className="text-white italic">-No data-</span>
+      )}
     </div>
   );
 };
 const ItemList = ({ items, icon }: SeparatedListProps) => {
   return (
-    <div className="flex flex-row gap-2 text-xl font-extralight">
-      {items.map((item) => (
-        <div className="flex flex-row items-center">
-          <img src={icon} alt="separator icon" className="size-8" />
-          <span className="text-white">{item}</span>
-        </div>
-      ))}
+    <div className="flex flex-row gap-2 text-xl font-extralight flex-wrap justify-center">
+      {items && items.length > 0 ? (
+        items.map((item) => (
+          <div className="flex flex-row items-center" key={nanoid()}>
+            <img src={icon} alt="separator icon" className="size-8" />
+            <span className="text-white">{item}</span>
+          </div>
+        ))
+      ) : (
+        <span className="text-white italic">-No data-</span>
+      )}
+    </div>
+  );
+};
+
+interface DataWeaponProps {
+  attack?: number;
+  defense?: number;
+}
+const DataWeapon = ({ attack, defense }: DataWeaponProps) => {
+  return (
+    <div className="flex flex-row gap-10 text-xl font-extralight flex-wrap justify-center items-center">
+      <div className="flex flex-row items-center gap-2">
+        <img src={'/icons/sword.png'} className="size-8" />
+        <span className="text-white">{attack || '0'} attack</span>
+      </div>
+      <div className="flex flex-row items-center gap-2">
+        <img src={'/icons/shield.png'} className="size-8" />
+        <span className="text-white">{defense || '0'} defense</span>
+      </div>
     </div>
   );
 };
@@ -74,6 +129,63 @@ export const ZeldaDetail = () => {
       </div>
     );
   }
+  const fnExtraInfo = (category: string) => {
+    switch (category) {
+      case 'materials':
+        return (
+          <div className="flex flex-row justify-between items-start w-full">
+            <div className="flex flex-col items-center gap-1 w-1/2">
+              <p className="text-white">Hearts recovered:</p>
+              <div className="flex flex-row text-white items-center w-full justify-center gap-2">
+                <GetHearts hearts={data.hearts_recovered}></GetHearts>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-1 w-1/2">
+              <p className="text-white">Cooking effect:</p>
+              {data.cooking_effect ? (
+                <p className=" text-xl font-extralight text-white first-letter:uppercase">
+                  {data.cooking_effect}
+                </p>
+              ) : (
+                <p className="text-white italic">-No data-</p>
+              )}
+            </div>
+          </div>
+        );
+
+      case 'treasure':
+      case 'creatures':
+      case 'monsters':
+        return (
+          <div className="flex flex-col items-center gap-1">
+            <p className="text-white">Drops:</p>
+            <div className="flex flex-row text-white items-center w-full justify-center gap-2">
+              <ItemList
+                items={data.drops}
+                icon={
+                  data.category == 'creatures'
+                    ? '../icons/meat.png'
+                    : '../frame/bomb.png'
+                }
+              ></ItemList>
+            </div>
+          </div>
+        );
+      case 'equipment':
+        return (
+          <div className="flex flex-col items-center gap-1">
+            <p className="text-white">Properties:</p>
+            <DataWeapon
+              attack={data.properties.attack}
+              defense={data.properties.defense}
+            ></DataWeapon>
+          </div>
+        );
+      default:
+        return <></>;
+    }
+  };
+
   return (
     <>
       <div className="flex flex-row w-full justify-center items-center gap-10">
@@ -105,15 +217,8 @@ export const ZeldaDetail = () => {
               ></SeparatedList>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-1">
-            <p className="text-white">Drops:</p>
-            <div className="flex flex-row text-white items-center w-full justify-center gap-2">
-              <ItemList
-                items={data.drops}
-                icon={'../frame/bomb.png'}
-              ></ItemList>
-            </div>
-          </div>
+          {fnExtraInfo(data.category)}
+
           {/* Images in the corners */}
           <img
             src="../frame/deco-corner.png"
