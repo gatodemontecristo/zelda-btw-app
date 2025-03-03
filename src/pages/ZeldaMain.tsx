@@ -5,11 +5,13 @@ import {
   ButtonGroup,
   CardResource,
   CardSkeleton,
+  NotFound,
   Pagination,
   Paragraph,
 } from '../components';
 import { usePagination, useResources } from '../hooks';
 import { BOTWCompendiumProps, typeCompendium } from '../helpers';
+import { Notyf } from 'notyf';
 
 export const ZeldaMain = () => {
   const [selectedOption, setSelectedOption] = useState('monsters');
@@ -25,6 +27,18 @@ export const ZeldaMain = () => {
     jump(1);
   }, [compendiumQuery.data]);
 
+  const notyf = new Notyf();
+
+  useEffect(() => {
+    if (!compendiumQuery.isLoading) {
+      compendiumQuery.isError
+        ? notyf.error({ background: 'red', message: 'Error obtaining data' })
+        : notyf.success({
+            background: 'purple',
+            message: 'Data obtained successfully',
+          });
+    }
+  }, [compendiumQuery.isLoading, compendiumQuery.isError]);
   return (
     <div className="flex flex-col gap-20 text-center items-center justify-center ">
       <Paragraph color="zelda-history" size="xl">
@@ -87,8 +101,16 @@ export const ZeldaMain = () => {
               ></CardResource>
             ),
           )}
+
+        {currentData().length === 0 && !compendiumQuery.isLoading && (
+          <NotFound
+            imgUrl="../frame/link404.png"
+            size={100}
+            classNameTitle="pt-10 text-4xl"
+          ></NotFound>
+        )}
       </div>
-      {currentData() && (
+      {currentData().length > 0 && (
         <Pagination
           currentPage={currentPage}
           maxPage={maxPage}

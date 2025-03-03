@@ -5,3 +5,7 @@ export const sleep = (milliseconds: number) => {
     }, milliseconds);
   });
 };
+
+export const forceError = () => {
+  throw new Error('Simulated error');
+};

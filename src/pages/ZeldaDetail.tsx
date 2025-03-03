@@ -1,7 +1,9 @@
 import { useNavigate, useParams } from 'react-router';
 import { useDetail } from '../hooks';
-import { BasicButton } from '../components';
+import { BasicButton, NotFound } from '../components';
 import { nanoid } from 'nanoid';
+import { useEffect } from 'react';
+import { Notyf } from 'notyf';
 
 interface GetHeartsProps {
   hearts?: number;
@@ -118,6 +120,17 @@ export const ZeldaDetail = () => {
   const onNavigateHome = () => {
     navigate('/main');
   };
+  const notyf = new Notyf();
+  useEffect(() => {
+    if (!isLoading) {
+      detailQuery.isError
+        ? notyf.error({ background: 'red', message: 'Error obtaining data 2' })
+        : notyf.success({
+            background: 'purple',
+            message: 'Data obtained successfully 2',
+          });
+    }
+  }, [isLoading, detailQuery.isError]);
   if (isLoading) {
     return (
       <div className="flex flex-col w-full items-center relative h-[80vh] justify-center">
@@ -126,6 +139,18 @@ export const ZeldaDetail = () => {
           src="/loader/preload-dots.png"
           className="absolute w-1/5 animate-spin"
         ></img>
+      </div>
+    );
+  }
+
+  if (detailQuery.isError) {
+    return (
+      <div className="flex flex-col w-full items-center relative h-[80vh] justify-center">
+        <NotFound
+          imgUrl="../frame/link404.png"
+          size={20}
+          classNameTitle="pt-10 text-4xl"
+        ></NotFound>
       </div>
     );
   }

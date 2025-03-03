@@ -4,6 +4,7 @@ import './index.css';
 import { ZeldaApp } from './ZeldaApp.tsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import 'notyf/notyf.min.css';
 
 const queryClient = new QueryClient();
 
