@@ -12,6 +12,7 @@ import {
 import { usePagination, useResources } from '../hooks';
 import { BOTWCompendiumProps, typeCompendium } from '../helpers';
 import { Notyf } from 'notyf';
+import { useMediaQuery } from 'react-responsive';
 
 export const ZeldaMain = () => {
   const [selectedOption, setSelectedOption] = useState('monsters');
@@ -39,9 +40,11 @@ export const ZeldaMain = () => {
           });
     }
   }, [compendiumQuery.isLoading, compendiumQuery.isError]);
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const textSize = isMobile ? 'lg' : 'xl';
   return (
     <div className="flex flex-col gap-20 text-center items-center justify-center ">
-      <Paragraph color="zelda-history" size="xl">
+      <Paragraph color="zelda-history" size={textSize}>
         <p>
           Embark on a reimagined adventure through Hyrule with our fresh Ul
           redesign for The Legend of Zelda: Breath of the Wild. Seamlessly

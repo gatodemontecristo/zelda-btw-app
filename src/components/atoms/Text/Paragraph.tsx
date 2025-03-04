@@ -34,7 +34,7 @@ export const Paragraph = ({
         child
           ? React.cloneElement(child, {
               className: clsx(
-                'italic font-light p-4 w-[60%]',
+                'italic font-light p-4 md:w-[60%] w-[80%]',
                 'text-' + color,
                 'text-' + size,
                 className,
