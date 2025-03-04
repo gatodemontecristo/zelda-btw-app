@@ -14,7 +14,7 @@ export const BordeLogo = ({ imgUrl, size = 40 }: BordeLogoProps) => {
   return (
     <div
       className={clsx(
-        'flex flex-row w-[70%] justify-center items-center relative py-8',
+        'flex flex-row md:w-[70%] w-[100%] justify-center items-center relative py-8',
       )}
     >
       <div

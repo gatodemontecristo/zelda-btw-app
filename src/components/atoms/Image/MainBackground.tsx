@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import { ReactElement } from 'react';
 
 export interface MainBackgroundProps {
@@ -23,17 +22,18 @@ export const MainBackground = ({
   image = 'version1',
   children,
   shadowSize = 'full',
+  color = '#59dbfe',
 }: MainBackgroundProps) => {
   const getShadowSize = (size: string) => {
     switch (size) {
       case 'sm':
-        return 'h-1/4';
+        return '20%';
       case 'md':
-        return 'h-1/3';
+        return '50%';
       case 'lg':
-        return 'h-1/3';
+        return '75%';
       default:
-        return 'h-full';
+        return '100%';
     }
   };
   const getImage = (image: string) => {
@@ -58,13 +58,24 @@ export const MainBackground = ({
         alt="Background"
       />
       <div className="relative z-10 flex flex-col items-center">{children}</div>
+
       <div
-        className={clsx(
-          `absolute bottom-0 left-0 w-full  bg-gradient-to-t  to-transparent  py-4 z-5`,
-          getShadowSize(shadowSize),
-          getColorShadow(), // This is the shadow size
-        )}
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: getShadowSize(shadowSize),
+          background: `linear-gradient(to top, ${color}, transparent)`,
+          padding: '1rem',
+          zIndex: 5,
+        }}
       ></div>
+      {/* <div
+        className={clsx(
+          `absolute bottom-0 left-0 w-full  bg-linear-to-t from-[#ED9000] to-transparent  py-4 z-5 h-full`,
+        )}
+      ></div> */}
     </div>
   );
 };
