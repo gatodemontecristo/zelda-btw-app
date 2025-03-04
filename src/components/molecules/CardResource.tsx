@@ -3,6 +3,7 @@ import { BasicButton } from '../atoms/Button/BasicButton';
 import { BOTWCompendiumProps } from '../../helpers';
 import clsx from 'clsx';
 import { useNavigate } from 'react-router';
+import { useMediaQuery } from 'react-responsive';
 
 export const CardResource = ({
   resource,
@@ -15,6 +16,8 @@ export const CardResource = ({
   const onNavigateDetail = () => {
     navigate(`/detail/${resource.id}`);
   };
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const lineSize = isMobile ? 80 : 40;
   return (
     <div
       className={clsx(
@@ -25,10 +28,13 @@ export const CardResource = ({
         className,
       )}
     >
-      <div className="relative flex flex-row items-center justify-center p-2 bg-[url(../frame/gameplay-frame.png)]  bg-no-repeat bg-cover bg-center w-[200px] h-[200px]">
+      <div
+        className="relative flex flex-row items-center justify-center p-2 bg-[url(../frame/gameplay-frame.png)]  bg-no-repeat bg-cover bg-center md:w-[200px] md:h-[200px]
+      size-[160px]"
+      >
         <img
           src={resource.image}
-          className="size-[180px] rounded-full"
+          className="md:size-[180px] size-[140px] rounded-full"
           alt=""
         />
       </div>
@@ -40,7 +46,7 @@ export const CardResource = ({
           className="mt-4"
         ></UnderlinedTitle.Title>
         <UnderlinedTitle.Separator
-          width={40}
+          width={lineSize}
           version="version01"
         ></UnderlinedTitle.Separator>
       </UnderlinedTitle>

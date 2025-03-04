@@ -42,6 +42,9 @@ export const ZeldaMain = () => {
   }, [compendiumQuery.isLoading, compendiumQuery.isError]);
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   const textSize = isMobile ? 'lg' : 'xl';
+  const buttonSize = isMobile ? 'xl' : '2xl';
+  const featureSize = isMobile ? 'text-4xl' : 'text-5xl';
+  const lineSize = isMobile ? 60 : 40;
   return (
     <div className="flex flex-col gap-20 text-center items-center justify-center ">
       <Paragraph color="zelda-history" size={textSize}>
@@ -69,11 +72,11 @@ export const ZeldaMain = () => {
       <UnderlinedTitle className="mt-8">
         <UnderlinedTitle.Title
           label="Features"
-          size="text-5xl"
+          size={featureSize}
           className="mt-4"
         ></UnderlinedTitle.Title>
         <UnderlinedTitle.Separator
-          width={40}
+          width={lineSize}
           version="version02"
         ></UnderlinedTitle.Separator>
       </UnderlinedTitle>
@@ -83,14 +86,14 @@ export const ZeldaMain = () => {
         selectedValue={selectedOption}
         onChange={setSelectedOption}
         color="blue-900"
-        size="2xl"
+        size={buttonSize}
       />
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center md:gap-4 gap-2">
         {compendiumQuery.isLoading &&
           Array.from({ length: 12 }).map(() => (
             <CardSkeleton
               key={nanoid()}
-              className="w-1/5 border border-zelda-history rounded-lg"
+              className="md:w-1/5 w-[45%] border border-zelda-history rounded-lg"
             ></CardSkeleton>
           ))}
 
@@ -99,7 +102,7 @@ export const ZeldaMain = () => {
             (resource: BOTWCompendiumProps) => (
               <CardResource
                 key={nanoid()}
-                className="w-1/5 gap-2"
+                className="md:w-1/5 w-[45%] md:gap-2 gap-1"
                 resource={resource}
               ></CardResource>
             ),
