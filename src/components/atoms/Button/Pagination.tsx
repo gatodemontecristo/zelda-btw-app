@@ -19,7 +19,7 @@ export const Pagination: React.FC<PaginationProps> = ({
   onJump,
 }) => {
   return (
-    <div className="flex justify-center items-center space-x-2 mt-4">
+    <div className="flex justify-center items-center space-x-2 md:mt-4 mt-2 flex-wrap md:px-0 px-5 md:gap-0 gap-1">
       <button
         onClick={onPrev}
         className={clsx(
