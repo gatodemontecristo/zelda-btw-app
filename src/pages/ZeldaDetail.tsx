@@ -234,7 +234,11 @@ export const ZeldaDetail = () => {
               <p>ID:</p>
               <p className="text-4xl font-bold">{data.id}</p>
             </div>
-            <SeparatorLine version="version01" width={90}></SeparatorLine>
+            <SeparatorLine
+              version="version01"
+              width={90}
+              className="flex md:hidden"
+            ></SeparatorLine>
             <div className="md:flex hidden flex-col">
               <p className="text-zelda-history text-5xl">|</p>
             </div>
