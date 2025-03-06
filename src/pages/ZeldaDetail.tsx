@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router';
 import { useDetail } from '../hooks';
-import { BasicButton, NotFound } from '../components';
+import { BasicButton, NotFound, SeparatorLine } from '../components';
 import { nanoid } from 'nanoid';
 import { useEffect } from 'react';
 import { Notyf } from 'notyf';
@@ -106,7 +106,7 @@ interface TitleDetailProps {
 }
 const TitleDetail = ({ title }: TitleDetailProps) => {
   return (
-    <div className="absolute top-10 -left-15  border border-zelda-history bg-[url(../frame/pattern-blk-diamond.jpg)] z-10">
+    <div className="absolute top-10 md:-left-15 -left-10  border border-zelda-history bg-[url(../frame/pattern-blk-diamond.jpg)] z-10">
       <p className="text-white text-3xl uppercase p-5 font-hyllian">{title}</p>
     </div>
   );
@@ -134,10 +134,13 @@ export const ZeldaDetail = () => {
   if (isLoading) {
     return (
       <div className="flex flex-col w-full items-center relative h-[80vh] justify-center">
-        <img src="/loader/preload-owl2.png" className="w-1/5 z-10"></img>
+        <img
+          src="/loader/preload-owl2.png"
+          className="md:w-1/5 w-1/2 z-10"
+        ></img>
         <img
           src="/loader/preload-dots.png"
-          className="absolute w-1/5 animate-spin"
+          className="absolute md:w-1/5 w-1/2 animate-spin"
         ></img>
       </div>
     );
@@ -158,7 +161,7 @@ export const ZeldaDetail = () => {
     switch (category) {
       case 'materials':
         return (
-          <div className="flex flex-row justify-between items-start w-full">
+          <div className="flex md:flex-row flex-col justify-between md:items-start items-center md:gap-0 gap-3 w-full">
             <div className="flex flex-col items-center gap-1 w-1/2">
               <p className="text-white">Hearts recovered:</p>
               <div className="flex flex-row text-white items-center w-full justify-center gap-2">
@@ -213,8 +216,8 @@ export const ZeldaDetail = () => {
 
   return (
     <>
-      <div className="flex flex-row w-full justify-center items-center gap-10">
-        <div className="w-2/4 ms-20 my-10 flex flex-col relative bg-repeat px-5 pt-15 pb-15 gap-4 border border-zelda-history bg-[url(../frame/pattern-green-diamond.jpg)]">
+      <div className="flex md:flex-row  flex-col-reverse w-full justify-center items-center gap-10">
+        <div className="md:w-2/4 w-[80%] md:ms-20 ms-5 my-10 flex flex-col relative bg-repeat px-5 md:pt-15 pt-40 pb-15 gap-4 border border-zelda-history bg-[url(../frame/pattern-green-diamond.jpg)]">
           <TitleDetail title={data.name}></TitleDetail>
           <CategoryDetail
             category={data.category}
@@ -226,15 +229,20 @@ export const ZeldaDetail = () => {
               {data.description}
             </p>
           </div>
-          <div className="flex flex-row justify-center gap-5 items-center">
+          <div className="flex md:flex-row flex-col justify-center gap-5 items-center">
             <div className="flex flex-col text-white">
               <p>ID:</p>
               <p className="text-4xl font-bold">{data.id}</p>
             </div>
-            <div className="flex flex-col">
+            <SeparatorLine
+              version="version01"
+              width={90}
+              className="flex md:hidden"
+            ></SeparatorLine>
+            <div className="md:flex hidden flex-col">
               <p className="text-zelda-history text-5xl">|</p>
             </div>
-            <div className="flex flex-col text-white">
+            <div className="flex flex-col md:items-start items-center text-white gap-2">
               <p>Locations:</p>
               <SeparatedList
                 items={data.common_locations}
@@ -266,7 +274,7 @@ export const ZeldaDetail = () => {
             alt="Corner Image"
           />
         </div>
-        <div className=" w-1/4 relative flex flex-col items-center justify-center p-5 bg-[url(../frame/gameplay-frame.png)]  bg-no-repeat bg-cover bg-center ">
+        <div className=" md:w-1/4 w-[80%] relative flex flex-col items-center justify-center p-5 bg-[url(../frame/gameplay-frame.png)]  bg-no-repeat bg-cover bg-center ">
           <img src={data.image} className="size-full rounded-full" alt="" />
         </div>
       </div>

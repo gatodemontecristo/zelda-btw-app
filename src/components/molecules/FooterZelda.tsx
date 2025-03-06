@@ -1,25 +1,27 @@
 import clsx from 'clsx';
 import { BasicButton, BasicButtonProps } from '../atoms';
 import { ReactElement } from 'react';
-
+import { nanoid } from 'nanoid';
 interface FooterZeldaProps {
   className?: string;
   author: string;
   location: string;
-  children?: ReactElement | ReactElement[];
+  button?: ReactElement;
+  social?: ReactElement;
 }
 
-export const FooterZelda = ({ children, ...props }: FooterZeldaProps) => {
+export const FooterZelda = ({ button, social, ...props }: FooterZeldaProps) => {
   return (
     <div
       className={clsx(
         props.className,
-        'flex flex-col py-10 items-center justify-center bg-black w-full',
+        'flex flex-col py-15 items-center justify-center bg-black w-full',
       )}
     >
-      {children}
+      {button}
       <p className="font-bold text-2xl text-zelda-sand">{props.author}</p>
       <p className="font-light text-base text-gray-400">{props.location}</p>
+      {social}
     </div>
   );
 };
@@ -28,4 +30,56 @@ const Button = ({ ...props }: BasicButtonProps) => {
   return <BasicButton {...props}></BasicButton>;
 };
 
+interface SocialSectionItemProps {
+  link: string;
+  name?: string;
+  isDefault?: boolean;
+}
+interface SocialSectionProps {
+  social: SocialSectionItemProps[];
+  website: SocialSectionItemProps[];
+}
+const SocialItem = ({
+  isDefault = false,
+  ...props
+}: SocialSectionItemProps) => {
+  return (
+    <a target="_blank" href={props.link}>
+      <div className="flex flex-row items-center justify-start gap-2">
+        <img
+          className="size-7 filter invert"
+          src={`../social/${isDefault ? 'nintendo-switch' : props.name}.svg`}
+          alt=""
+        />
+        <p className="font-light text-base text-zelda-sand first-letter:uppercase">
+          {props.name}
+        </p>
+      </div>
+    </a>
+  );
+};
+const Social = ({ ...props }: SocialSectionProps) => {
+  return (
+    <div className="flex  flex-row space-x-4 gap-3 items-start justify-center">
+      <div className="flex flex-col gap-2 items-start">
+        <p className="font-normal text-xl text-zelda-sand mb-2">Social :</p>
+        {props.social.map((item) => {
+          return <SocialItem {...item} key={nanoid()}></SocialItem>;
+        })}
+      </div>
+
+      <div className="flex flex-col">
+        <p className="text-white text-6xl font-light">|</p>
+      </div>
+      <div className="flex flex-col gap-2 items-start">
+        <p className="font-normal text-xl text-zelda-sand mb-2">Websites :</p>
+        {props.website.map((item) => {
+          return <SocialItem {...item} key={nanoid()}></SocialItem>;
+        })}
+      </div>
+    </div>
+  );
+};
 FooterZelda.Button = Button;
+
+FooterZelda.Social = Social;

@@ -46,9 +46,6 @@ export const MainBackground = ({
         return '../background/zelda_botw_3.jpg';
     }
   };
-  const getColorShadow = () => {
-    return 'from-zelda-purple';
-  };
 
   return (
     <div className=" overflow-x-hidden left-0 top-0 h-screen w-screen  flex flex-col items-center justify-center ">

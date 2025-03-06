@@ -30,14 +30,37 @@ export const ZeldaRoutes = () => {
         className="mt-10 gap-2"
         author={'Erick Dejo Vicente'}
         location={'Lima, Perú (2025)'}
-      >
-        <FooterZelda.Button
-          imgButton="../icons/github.png"
-          className="bg-zelda-hill p-5 hover:bg-black! "
-          classButton="size-15"
-          fnClickButton={onNavigateGithub}
-        ></FooterZelda.Button>
-      </FooterZelda>
+        button={
+          <FooterZelda.Button
+            imgButton="../icons/github.png"
+            className="bg-zelda-hill p-5 hover:bg-black! "
+            classButton="size-15"
+            fnClickButton={onNavigateGithub}
+          />
+        }
+        social={
+          <FooterZelda.Social
+            social={[
+              {
+                link: 'https://www.linkedin.com/in/erick-dejo-vicente-b819601b6/',
+                name: 'linkedin',
+              },
+            ]}
+            website={[
+              {
+                link: 'https://www.behance.net/gallery/176875981/Game-UI-for-The-Legend-of-Zelda-Breath-of-the-Wild?tracking_source=search_projects%7Czelda',
+                name: 'behance',
+                isDefault: true,
+              },
+              {
+                link: 'https://zelda.nintendo.com/links-awakening/es/',
+                name: 'nintendo',
+                isDefault: true,
+              },
+            ]}
+          ></FooterZelda.Social>
+        }
+      />
     </div>
   );
 };
