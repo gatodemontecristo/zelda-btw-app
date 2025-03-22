@@ -19,6 +19,8 @@ export const Basic: Story = {
     maxPage: 10,
     onNext: () => {},
     onPrev: () => {},
-    onJump: (page: number) => {},
+    onJump: (page: number) => {
+      console.log(page);
+    },
   },
 };

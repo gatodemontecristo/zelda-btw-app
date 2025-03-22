@@ -19,6 +19,7 @@ type Story = StoryObj<typeof meta>;
 export const Basic: Story = {
   args: {
     label: 'Basic labels',
+    fnClickButton: () => alert('Button clicked'),
   },
 };
 
@@ -26,5 +27,6 @@ export const ColorButton: Story = {
   args: {
     label: 'Color button',
     fontButton: 'bg-zelda-hill',
+    fnClickButton: () => alert('Button clicked'),
   },
 };

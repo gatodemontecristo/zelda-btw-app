@@ -83,6 +83,9 @@ npx husky init
 
 npm test
 
+7. Install Storybook with yarn
+
+npx storybook@latest init --builder vite
 
 /***************************************/
 How to install tailwindcss 2025?
