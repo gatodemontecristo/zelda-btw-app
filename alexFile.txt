@@ -92,3 +92,58 @@ How to install tailwindcss 2025?
 /***************************************/
 
 1. New tailwindcss version released vs4  
+
+/***************************************/
+How to install Jest 2025?
+/***************************************/
+
+1. Install these dependencies in the development environment
+
+yarn add -D jest @types/jest ts-jest  
+yarn add -D @tailwindcss/postcss
+yarn add -D babel-jest @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript identity-obj-proxy
+
+2. Create jest.config.ts whith this configuration
+
+import type { Config } from 'jest';
+
+const config: Config = {
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  transform: {
+    '^.+\\.(ts|tsx|js|jsx)$': 'babel-jest',
+  },
+  moduleNameMapper: {
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
+  transformIgnorePatterns: ['/node_modules/(?!(nanoid|other-esm-package)/)'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+};
+
+export default config;
+
+3. Create babel.config.js whith this configuration
+
+module.exports = {
+  presets: [
+    ['@babel/preset-env', { targets: { node: 'current' } }],
+    ["@babel/preset-react", {
+      "runtime": "automatic"
+   }],
+    '@babel/preset-typescript',
+  ],
+};
+
+4. Create postcss.config.js whith this configuration
+
+module.exports = {
+    plugins: {
+      '@tailwindcss/postcss': {},
+      autoprefixer: {},
+    },
+  };
+
+EXTRA: Usefull commands
+
+yarn jest --clearCache
+touch postcss.config.js
