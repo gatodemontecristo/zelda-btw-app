@@ -11,6 +11,7 @@ const config: Config = {
   },
   transformIgnorePatterns: ['/node_modules/(?!(nanoid|other-esm-package)/)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
 
 export default config;
