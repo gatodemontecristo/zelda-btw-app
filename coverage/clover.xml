@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1743986748814" clover="3.2.0">
+  <project timestamp="1743986748814" name="All files">
+    <metrics statements="88" coveredstatements="36" conditionals="65" coveredconditionals="7" methods="35" coveredmethods="2" elements="188" coveredelements="45" complexity="0" loc="88" ncloc="88" packages="8" files="23" classes="23"/>
+    <package name="components">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="components.atoms">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="components.atoms.Button">
+      <metrics statements="13" coveredstatements="4" conditionals="28" coveredconditionals="5" methods="8" coveredmethods="1"/>
+      <file name="BasicButton.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Button/BasicButton.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+      </file>
+      <file name="ButtonGroup.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Button/ButtonGroup.tsx">
+        <metrics statements="7" coveredstatements="1" conditionals="13" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+      </file>
+      <file name="Pagination.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Button/Pagination.tsx">
+        <metrics statements="4" coveredstatements="1" conditionals="10" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Button/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="components.atoms.Image">
+      <metrics statements="15" coveredstatements="2" conditionals="11" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="BordeLogo.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Image/BordeLogo.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="13" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="MainBackground.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Image/MainBackground.tsx">
+        <metrics statements="13" coveredstatements="1" conditionals="10" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Image/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="components.atoms.Loading">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="Skeleton.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Loading/Skeleton.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Loading/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="components.atoms.Separator">
+      <metrics statements="7" coveredstatements="1" conditionals="5" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="SeparatorLine.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Separator/SeparatorLine.tsx">
+        <metrics statements="7" coveredstatements="1" conditionals="5" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Separator/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="components.atoms.Text">
+      <metrics statements="7" coveredstatements="3" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="NotFound.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Text/NotFound.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="Paragraph.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Text/Paragraph.tsx">
+        <metrics statements="3" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
+      <file name="SubTitle.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Text/SubTitle.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/Text/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="components.molecules">
+      <metrics statements="41" coveredstatements="21" conditionals="12" coveredconditionals="0" methods="16" coveredmethods="0"/>
+      <file name="CardResource.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/molecules/CardResource.tsx">
+        <metrics statements="7" coveredstatements="1" conditionals="9" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+      <file name="CardSkeleton.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/molecules/CardSkeleton.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="FooterZelda.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/molecules/FooterZelda.tsx">
+        <metrics statements="12" coveredstatements="6" conditionals="3" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+      </file>
+      <file name="MainSection.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/molecules/MainSection.tsx">
+        <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+      </file>
+      <file name="UnderlinedTitle.tsx" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/molecules/UnderlinedTitle.tsx">
+        <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/molecules/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>
