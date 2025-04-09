@@ -1,4 +1,3 @@
-// filepath: /Users/pc/Documents/Proyectos REACT (2025)/project_zelda_btw/project-zelda-btw/src/components/atoms/ButtonGroup.tsx
 import React from 'react';
 import clsx from 'clsx';
 import { nanoid } from 'nanoid';
