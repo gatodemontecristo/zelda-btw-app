@@ -18,6 +18,7 @@ export const BordeLogo = ({ imgUrl, size = 40 }: BordeLogoProps) => {
       )}
     >
       <div
+        data-testid="gradient-border"
         className="absolute inset-0 border-t-8 border-b-8 border-amber-300 gradient-border
 
        

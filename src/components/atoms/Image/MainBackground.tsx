@@ -68,11 +68,6 @@ export const MainBackground = ({
           zIndex: 5,
         }}
       ></div>
-      {/* <div
-        className={clsx(
-          `absolute bottom-0 left-0 w-full  bg-linear-to-t from-[#ED9000] to-transparent  py-4 z-5 h-full`,
-        )}
-      ></div> */}
     </div>
   );
 };
