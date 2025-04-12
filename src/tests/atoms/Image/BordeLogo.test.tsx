@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { BordeLogo } from '../components';
+import { BordeLogo } from '../../../components';
 
 describe('BordeLogo', () => {
   it('debería renderizar el logo con la clase correcta', () => {

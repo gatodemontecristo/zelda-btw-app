@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { ButtonGroup } from '../components';
+import { ButtonGroup } from '../../../components';
 
 describe('ButtonGroup', () => {
   const options = [

@@ -1,7 +1,7 @@
 // src/tests/Skeleton.test.tsx
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Skeleton } from '../components';
+import { Skeleton } from '../../../components';
 
 describe('Skeleton', () => {
   it('renderiza correctamente el tipo circle con clases extra', () => {

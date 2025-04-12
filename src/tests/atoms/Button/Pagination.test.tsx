@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Pagination } from '../components';
+import { Pagination } from '../../../components';
 describe('Pagination', () => {
   const defaultProps = {
     currentPage: 2,
