@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom'; // Import jest-dom matchers
-import { BasicButton } from '../components/atoms/Button/BasicButton';
+import { BasicButton } from '../../../components/atoms/Button/BasicButton';
 
 describe('BasicButton', () => {
   it('debería renderizar el botón con el label', () => {

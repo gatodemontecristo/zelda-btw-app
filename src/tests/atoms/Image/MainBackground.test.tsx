@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { MainBackground } from '../components';
+import { MainBackground } from '../../../components';
 
 describe('MainBackground', () => {
   it('debería renderizar el logo con la clase correcta', () => {
