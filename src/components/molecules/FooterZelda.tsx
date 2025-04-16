@@ -44,7 +44,7 @@ const SocialItem = ({
   ...props
 }: SocialSectionItemProps) => {
   return (
-    <a target="_blank" href={props.link}>
+    <a target="_blank" href={props.link} data-testid="social-item">
       <div className="flex flex-row items-center justify-start gap-2">
         <img
           className="size-5 filter invert"
