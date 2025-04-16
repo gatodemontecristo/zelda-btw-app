@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.28% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">55.55% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>5/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.28% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -141,20 +141,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,25 +212,25 @@ import clsx from 'clsx';
 import { useNavigate } from 'react-router';
 import { useMediaQuery } from 'react-responsive';
 &nbsp;
-export const CardResource = <span class="fstat-no" title="function not covered" >({</span>
+export const CardResource = ({
   resource,
-  className = <span class="branch-0 cbranch-no" title="branch not covered" >'',</span>
+  className = '',
 }: {
   resource: BOTWCompendiumProps;
   className?: string;
 }) =&gt; {
-  const navigate = <span class="cstat-no" title="statement not covered" >useNavigate();</span>
-  const onNavigateDetail = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    navigate(`/detail/${resource.id}`);</span>
+  const navigate = useNavigate();
+  const onNavigateDetail = () =&gt; {
+    navigate(`/detail/${resource.id}`);
   };
-  const isMobile = <span class="cstat-no" title="statement not covered" >useMediaQuery({ query: '(max-width: 767px)' });</span>
-  const lineSize = <span class="cstat-no" title="statement not covered" >isMobile ? 80 : 40;</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const lineSize = isMobile ? <span class="branch-0 cbranch-no" title="branch not covered" >80 </span>: 40;
+  return (
     &lt;div
       className={clsx(
         'flex flex-col items-center  bg-repeat p-5 border border-zelda-history rounded-lg',
         resource.dlc
-          ? 'bg-[url(../frame/pattern-white-tri.jpg)]'
+          ? <span class="branch-0 cbranch-no" title="branch not covered" >'bg-[url(../frame/pattern-white-tri.jpg)]'</span>
           : 'bg-[url(../frame/pattern-blk-diamond.jpg)]',
         className,
       )}
@@ -260,12 +260,12 @@ export const CardResource = <span class="fstat-no" title="function not covered" 
       &lt;div
         className={clsx(
           'text-sm font-medium text-center',
-          resource.dlc ? 'text-black' : 'text-white',
+          resource.dlc ? <span class="branch-0 cbranch-no" title="branch not covered" >'text-black' </span>: 'text-white',
         )}
       &gt;
         {resource.common_locations
           ? resource.common_locations.join(', ')
-          : '-No data-'}
+          : <span class="branch-1 cbranch-no" title="branch not covered" >'-No data-'}</span>
       &lt;/div&gt;
       &lt;BasicButton
         imgButton="./icons/eye.png"
@@ -283,7 +283,7 @@ export const CardResource = <span class="fstat-no" title="function not covered" 
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-04-07T00:45:48.787Z
+                at 2025-04-16T16:58:56.492Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

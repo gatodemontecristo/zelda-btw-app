@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.28% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/7</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.28% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/7</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -115,22 +115,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,22 +157,22 @@ export interface SeparatorLineProps {
   width?: number;
   className?: string;
 }
-export const SeparatorLine = <span class="fstat-no" title="function not covered" >({</span>
-  version = <span class="branch-0 cbranch-no" title="branch not covered" >'version01',</span>
-  width = <span class="branch-0 cbranch-no" title="branch not covered" >20,</span>
+export const SeparatorLine = ({
+  version = 'version01',
+  width = 20,
   className,
 }: SeparatorLineProps) =&gt; {
-  const getSeparator = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(v</span>ersion: string) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    switch (version) {</span>
+  const getSeparator = (version: string) =&gt; {
+    switch (version) {
       case 'version01':
-<span class="cstat-no" title="statement not covered" >        return '../separator/arrow_separator.png';</span>
+        return '../separator/arrow_separator.png';
       case 'version02':
-<span class="cstat-no" title="statement not covered" >        return '../separator/gold_separator.png';</span>
-      default:
+        return '../separator/gold_separator.png';
+<span class="branch-2 cbranch-no" title="branch not covered" >      default:</span>
 <span class="cstat-no" title="statement not covered" >        return '../separator/elegant_separator.png';</span>
     }
   };
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div
       className={clsx(
         'flex flex-row w-full items-center justify-center',
@@ -181,7 +181,7 @@ export const SeparatorLine = <span class="fstat-no" title="function not covered"
     &gt;
       &lt;img
         src={getSeparator(version)}
-        alt="separator"
+        alt="Separator Line"
         style={{
           width: width + '%',
         }}
@@ -196,7 +196,7 @@ export const SeparatorLine = <span class="fstat-no" title="function not covered"
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-04-07T00:45:48.787Z
+                at 2025-04-16T16:58:56.492Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
