@@ -27,7 +27,7 @@ jobs:
         run: yarn test --coverage
 
       - name: Install sonar-scanner
-        run: npm install -g sonar-scanner
+        run: yarn add -g sonar-scanner
 
       - name: Run SonarCloud with custom config
         run: sonar-scanner
