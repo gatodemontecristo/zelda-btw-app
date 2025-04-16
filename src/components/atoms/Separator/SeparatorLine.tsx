@@ -32,7 +32,7 @@ export const SeparatorLine = ({
     >
       <img
         src={getSeparator(version)}
-        alt="separator"
+        alt="Separator Line"
         style={{
           width: width + '%',
         }}

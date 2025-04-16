@@ -16,8 +16,8 @@ describe('Paragraph', () => {
 
   it('should render the children with the props that we send it', () => {
     const { container } = render(
-      <Paragraph>
-        <p className="text-red-500">Test</p>
+      <Paragraph className="text-red-500">
+        <p>Test</p>
       </Paragraph>,
     );
     const paragraph = container.querySelector('p');
