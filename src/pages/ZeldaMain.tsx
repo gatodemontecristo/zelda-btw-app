@@ -50,7 +50,7 @@ export const ZeldaMain = () => {
       <Paragraph color="zelda-history" size={textSize}>
         <p>
           Embark on a reimagined adventure through Hyrule with our fresh Ul
-          redesign for The Legend of Zelda: Breath of the Wild. Seamlessly
+          redesign for ∫ The Legend of Zelda: Breath of the Wild. Seamlessly
           blending classic aesthetics with modern functionality, our alternative
           Ul options fix existing issues and breathe new life into the gameplay
           experience.
