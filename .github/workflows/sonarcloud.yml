@@ -26,7 +26,9 @@ jobs:
       - name: Run tests with coverage
         run: yarn test --coverage
 
-      - name: Run SonarCloud with custom config
-        run: sonar-scanner
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
+        with:
+          projectBaseDir: '.' # Opcional si el archivo sonar-project.properties está en la raíz
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
