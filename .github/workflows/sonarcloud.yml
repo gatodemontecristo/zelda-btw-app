@@ -26,7 +26,10 @@ jobs:
       - name: Run tests with coverage
         run: yarn test --coverage
 
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2
+      - name: Install sonar-scanner
+        run: npm install -g sonar-scanner
+
+      - name: Run SonarCloud with custom config
+        run: sonar-scanner
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
