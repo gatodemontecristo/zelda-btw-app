@@ -79,12 +79,12 @@ yarn add --dev husky
 
 npx husky init
 
-6. Delete de command in husky/pre-commit
+6. Delete de command  in husky/pre-commit
 
 npm test
 
 7. Install Storybook with yarn
-
+ 
 npx storybook@latest init --builder vite
 
 /***************************************/
