@@ -28,7 +28,10 @@ jobs:
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
-        with:
-          projectBaseDir: '.' # Opcional si el archivo sonar-project.properties está en la raíz
+       with:
+          args: >
+            -Dsonar.projectKey=gatodemontecristo_zelda-btw-app
+            -Dsonar.organization=gatodemontecristo
+            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
