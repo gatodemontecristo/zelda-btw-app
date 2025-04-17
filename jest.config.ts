@@ -12,6 +12,9 @@ const config: Config = {
   transformIgnorePatterns: ['/node_modules/(?!(nanoid|other-esm-package)/)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  coveragePathIgnorePatterns: ['/node_modules/', '/coverage/'],
 };
 
 export default config;
