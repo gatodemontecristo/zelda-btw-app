@@ -50,6 +50,7 @@ export const ButtonGroup: React.FC<ButtonGroupProps> = ({
             <img
               src={option.imgUrl}
               className="md:size-[60px] size-[40px]"
+              alt="Button group image"
             ></img>
           )}
         </button>

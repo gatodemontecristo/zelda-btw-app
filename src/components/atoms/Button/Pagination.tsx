@@ -33,6 +33,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         <img
           src={`../arrow/arrow-left-${currentPage === 1 ? 'white' : 'color'}.png`}
           className="size-[20px]"
+          alt="Pagination left image"
         ></img>
       </button>
       {[...Array(maxPage)].map((_, index) => (
@@ -62,6 +63,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         <img
           src={`../arrow/arrow-left-${currentPage === maxPage ? 'white' : 'color'}.png`}
           className="size-[20px] transform -scale-x-100"
+          alt="Pagination right image"
         ></img>
       </button>
     </div>

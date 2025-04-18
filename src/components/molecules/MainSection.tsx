@@ -12,7 +12,6 @@ import {
 const MainSection = ({ children, ...props }: MainBackgroundProps) => {
   return <MainBackground {...props}>{children}</MainBackground>;
 };
-1;
 
 const Logo = ({ ...props }: BordeLogoProps) => {
   return <BordeLogo {...props}></BordeLogo>;

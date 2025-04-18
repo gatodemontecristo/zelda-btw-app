@@ -42,7 +42,13 @@ export const BasicButton = ({
       className={`rounded-full text-white flex flex-row font-bold shadow-lg ${fontButton} ${className} ease-in-out 
             hover:bg-white hover:text-black transform transition-all duration-300 gap-2 items-center justify-center`}
     >
-      {imgButton && <img src={imgButton} className={clsx(classButton)}></img>}
+      {imgButton && (
+        <img
+          src={imgButton}
+          className={clsx(classButton)}
+          alt="Basic button image"
+        ></img>
+      )}
       {label && <p>{label}</p>}
     </button>
   );
