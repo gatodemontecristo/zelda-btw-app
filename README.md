@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+<a id="readme-top"></a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gatodemontecristo_zelda-btw-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gatodemontecristo_zelda-btw-app)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=gatodemontecristo_zelda-btw-app&metric=bugs)](https://sonarcloud.io/summary/new_code?id=gatodemontecristo_zelda-btw-app)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=gatodemontecristo_zelda-btw-app&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=gatodemontecristo_zelda-btw-app)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=gatodemontecristo_zelda-btw-app&metric=coverage)](https://sonarcloud.io/summary/new_code?id=gatodemontecristo_zelda-btw-app)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=gatodemontecristo_zelda-btw-app&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=gatodemontecristo_zelda-btw-app)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/gatodemontecristo/zelda-btw-app">
+    <img src="/public/pixel.png" alt="Logo" width="80" height="80">
+  </a>
 
-## Expanding the ESLint configuration
+  <h3 align="center">Best-README-Template</h3>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  <p align="center">
+    A awesome encyclopedia of Zelda Breath of the Wild game resources
+    <br />
+    <a href="https://gadhagod.github.io/Hyrule-Compendium-API/#/"><strong>Explore the API service »</strong></a>
+    <br />
+    <br />
+    <a href="https://project-zelda-btw.netlify.app/">View Demo</a>
+    &middot;
+    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Trello dashboard</a>
+  </p>
+</div>
 
-- Configure the top-level `parserOptions` property like this:
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+![image](https://github.com/user-attachments/assets/eecf68ad-078f-48ea-9ea3-605b07bef662)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+The Hyrule Compendium (BTW) 🛡️🗡️🧚 is a React-based web application inspired by The Legend of Zelda: Breath of the Wild. This project serves as a fan-made resource for exploring the world of Hyrule, showcasing detailed information about items, locations, and more. The application is designed with a modern UI and responsive features to provide an engaging experience for fans of the game.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Features
+
+* Responsive Design: The application adapts seamlessly to different screen sizes, ensuring a great experience on both mobile and desktop devices.
+* Dynamic Routing: Powered by react-router-dom, the app provides a smooth navigation experience with nested routes.
+* Main Section: Displays the app's logo, title, and a customizable separator.
+* Footer: Includes author information, location, and social links (e.g., LinkedIn, Behance, Nintendo). A GitHub button allows users to navigate to the project's repository.
+* Social and Website Links: Provides quick access to external resources related to The Legend of Zelda.
+
+### Built With
+
+
+
+
