@@ -147,3 +147,80 @@ EXTRA: Usefull commands
 
 yarn jest --clearCache
 touch postcss.config.js
+rm <ruta-del-archivo>
+
+
+/***************************************/
+How to install SonarQube 2025?
+/***************************************/
+
+1. Sign up at https://sonarcloud.io with your GitHub account.
+
+2. Authorize and select your zelda-btw-app repo.
+
+3. Add the sonar-project.properties file to your repo
+In the project root, create this file:
+
+    sonar.projectKey=gatodemontecristo_zelda-btw-app
+    sonar.organization=gatodemontecristo
+    sonar.javascript.lcov.reportPaths=coverage/lcov.info
+
+    sonar.sources=src
+    sonar.tests=src
+    sonar.test.inclusions=src/**/*.test.tsx,src/**/*.test.ts
+    sonar.exclusions=**/__tests__/**,src/tests/**
+    sonar.language=ts
+    sonar.sourceEncoding=UTF-8
+
+4.Upload the analysis:
+
+    yarn global add sonar-scanner
+    sonar-scanner
+** Apparently it is not necessary if you use yarn
+
+
+5. Choose "Manually" when asked how to configure the project.
+SonarCloud will give you a scan token, sonar-project.properties, and tell you to use sonar-scanner.
+
+6. Add a GitHub Action for automatic analysis
+Create this file:
+📄 .github/workflows/sonarcloud.yml
+
+name: SonarCloud
+
+on:
+  push:
+    branches:
+      - onebranchtoconquerthemall
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sonarcloud:
+    name: SonarCloud Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run tests with coverage
+        run: yarn test --coverage
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
+        with:
+          projectBaseDir: '.'
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+7. Add the token to your Git environment
+
+Settings >  Secrets and variables > Actions > Secrets > SONAR_TOKEN
