@@ -63,6 +63,7 @@ Before starting, ensure you have the following installed on your system:
 
 * Node.js: Version 16.x or higher. Download it from <a href="https://nodejs.org/en">Node.js</a>.
 * Yarn: Version 1.x or higher.
+  
   ```sh
   npm install -g yarn
   ```
@@ -73,11 +74,56 @@ Before starting, ensure you have the following installed on your system:
 Follow these steps to install and run the project locally:
 
 * Clone the repository: Clone the repository from GitHub to your local machine:
+  
    ```sh
   git clone https://github.com/gatodemontecristo/zelda-btw-app.git
   cd zelda-btw-app
   ```
 * Install dependencies: Install all the necessary dependencies using Yarn:
+  
    ```sh
   yarn install
   ```
+* Run the development server. Start the development server with Vite:
+
+   ```sh
+  yarn dev
+  ```
+
+## Additional Commands
+
+The project includes several useful scripts that you can run with Yarn:
+
+* Build for production:
+
+ ```sh
+  yarn build
+  ```
+* Build unit tests:
+
+ ```sh
+  yarn test
+  ```
+* Build Storybook:
+
+ ```sh
+  yarn storybook
+  ```
+<!-- LICENSE -->
+## License
+
+Distributed under the Unlicense License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Erick Yoichi Dejo - https://linkedin.com/in/erick-dejo-vicente-b819601b6
+
+Project Link: https://github.com/gatodemontecristo/zelda-btw-app
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+  
