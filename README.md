@@ -10,11 +10,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/gatodemontecristo/zelda-btw-app">
-    <img src="/public/pixel.png" alt="Logo" width="80" height="80">
-  </a>
+  
+  <img src="/public/pixel.png" alt="Logo" width="80" height="80">
+  <img src="https://sonarcloud.io/api/project_badges/quality_gate?project=gatodemontecristo_zelda-btw-app" alt="Logo" width="80" height="80"/>
 
-  <h3 align="center">Best-README-Template</h3>
+
+
+  <h3 align="center">Zelda Breath of the Wild - Hyrule Compendium</h3>
 
   <p align="center">
     A awesome encyclopedia of Zelda Breath of the Wild game resources
@@ -24,7 +26,7 @@
     <br />
     <a href="https://project-zelda-btw.netlify.app/">View Demo</a>
     &middot;
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Trello dashboard</a>
+    <a href="https://trello.com/invite/b/67f4b5099e9805448cf186c5/ATTI52b85ec5096e14f3c085a188035d2a3a2A43099F/zelda-btw-jquery">Trello dashboard</a>
   </p>
 </div>
 
