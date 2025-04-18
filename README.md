@@ -44,8 +44,40 @@ Features
 * Footer: Includes author information, location, and social links (e.g., LinkedIn, Behance, Nintendo). A GitHub button allows users to navigate to the project's repository.
 * Social and Website Links: Provides quick access to external resources related to The Legend of Zelda.
 
-### Built With
+## Built With
 
+* ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) 
+* ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+* ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+* ![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)
+* 	![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+* 	![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)
+* 	![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+* 	![React](https://img.shields.io/badge/zustand-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+* ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+* ![SonarQube](https://img.shields.io/badge/SonarQube-black?style=for-the-badge&logo=sonarqube&logoColor=4E9BCD)
 
+## Requirements
 
+Before starting, ensure you have the following installed on your system:
 
+* Node.js: Version 16.x or higher. Download it from <a href="https://nodejs.org/en">Node.js</a>.
+* Yarn: Version 1.x or higher.
+  ```sh
+  npm install -g yarn
+  ```
+* Git: To clone the repository. Download it from <a href="https://git-scm.com/">Git</a>.
+
+## Installation Steps
+
+Follow these steps to install and run the project locally:
+
+* Clone the repository: Clone the repository from GitHub to your local machine:
+   ```sh
+  git clone https://github.com/gatodemontecristo/zelda-btw-app.git
+  cd zelda-btw-app
+  ```
+* Install dependencies: Install all the necessary dependencies using Yarn:
+   ```sh
+  yarn install
+  ```
