@@ -26,7 +26,7 @@
     <br />
     <a href="https://project-zelda-btw.netlify.app/">View Demo</a>
     &middot;
-    <a href="https://trello.com/invite/b/67f4b5099e9805448cf186c5/ATTI52b85ec5096e14f3c085a188035d2a3a2A43099F/zelda-btw-jquery">Trello dashboard</a>
+    <a href="https://trello.com/b/5onCaru4">Trello dashboard</a>
   </p>
 </div>
 
