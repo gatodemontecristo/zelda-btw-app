@@ -17,14 +17,14 @@ const GetHearts = ({ hearts }: GetHeartsProps) => {
     <div className="flex flex-row w-full justify-center items-center gap-2 pe-5">
       {Array.from({ length: totalHearts }).map(() => (
         <div className="w-[40px] h-[40px] overflow-hidden" key={nanoid()}>
-          <img src="/icons/heart.png" alt="Imagen recortada" />
+          <img src="/icons/heart.png" alt="Detail heart" />
         </div>
       ))}
       {decimalHearts > 0 && (
         <div className="w-[22px] h-[40px] overflow-hidden">
           <img
             src="/icons/heart.png"
-            alt="Imagen recortada"
+            alt="Detail heart cut"
             className="w-[40px] h-[40px]  object-cover object-left"
           />
         </div>
@@ -44,7 +44,7 @@ const SeparatedList = ({ items, icon }: SeparatedListProps) => {
           <div key={nanoid()} className="flex flex-row gap-2">
             <span className="text-white">{item}</span>
             {index < items.length - 1 && (
-              <img src={icon} alt="separator icon" className="w-4 h-6" />
+              <img src={icon} alt="Detail separator icon" className="w-4 h-6" />
             )}
           </div>
         ))
@@ -60,7 +60,7 @@ const ItemList = ({ items, icon }: SeparatedListProps) => {
       {items && items.length > 0 ? (
         items.map((item) => (
           <div className="flex flex-row items-center" key={nanoid()}>
-            <img src={icon} alt="separator icon" className="size-8" />
+            <img src={icon} alt="Detail separator icon" className="size-8" />
             <span className="text-white">{item}</span>
           </div>
         ))
@@ -79,11 +79,11 @@ const DataWeapon = ({ attack, defense }: DataWeaponProps) => {
   return (
     <div className="flex flex-row gap-10 text-xl font-extralight flex-wrap justify-center items-center">
       <div className="flex flex-row items-center gap-2">
-        <img src={'/icons/sword.png'} className="size-8" />
+        <img src={'/icons/sword.png'} className="size-8" alt="Detail sword" />
         <span className="text-white">{attack || '0'} attack</span>
       </div>
       <div className="flex flex-row items-center gap-2">
-        <img src={'/icons/shield.png'} className="size-8" />
+        <img src={'/icons/shield.png'} className="size-8" alt="Detail shield" />
         <span className="text-white">{defense || '0'} defense</span>
       </div>
     </div>
@@ -97,7 +97,7 @@ const CategoryDetail = ({ category, img }: CategoryDetailProps) => {
   return (
     <div className="flex flex-row w-full justify-end items-center gap-2 pe-5">
       <p className="text-white text-3xl font-bold font-hyllian">{category}</p>
-      <img src={img} className="size-17" />
+      <img src={img} className="size-17" alt="Detail category" />
     </div>
   );
 };
@@ -137,10 +137,12 @@ export const ZeldaDetail = () => {
         <img
           src="/loader/preload-owl2.png"
           className="md:w-1/5 w-1/2 z-10"
+          alt="Detail preload owl"
         ></img>
         <img
           src="/loader/preload-dots.png"
           className="absolute md:w-1/5 w-1/2 animate-spin"
+          alt="Detail preload dots"
         ></img>
       </div>
     );
@@ -256,22 +258,22 @@ export const ZeldaDetail = () => {
           <img
             src="../frame/deco-corner.png"
             className="absolute top-1 left-1 size-20 -scale-y-100"
-            alt="Corner Image"
+            alt="Corner Image top left"
           />
           <img
             src="../frame/deco-corner.png"
             className="absolute top-1 right-1 size-20 transform -scale-x-100 -scale-y-100"
-            alt="Corner Image"
+            alt="Corner Image top right"
           />
           <img
             src="../frame/deco-corner.png"
             className="absolute bottom-1 left-1 size-20 "
-            alt="Corner Image"
+            alt="Corner Image bottom left"
           />
           <img
             src="../frame/deco-corner.png"
             className="absolute bottom-1 right-1 size-20 transform -scale-x-100"
-            alt="Corner Image"
+            alt="Corner Image bottom right"
           />
         </div>
         <div className=" md:w-1/4 w-[80%] relative flex flex-col items-center justify-center p-5 bg-[url(../frame/gameplay-frame.png)]  bg-no-repeat bg-cover bg-center ">
