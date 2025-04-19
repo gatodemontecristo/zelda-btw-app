@@ -102,6 +102,18 @@ How to install Jest 2025?
 yarn add -D jest @types/jest ts-jest  
 yarn add -D @tailwindcss/postcss
 yarn add -D babel-jest @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript identity-obj-proxy
+yarn add -D @testing-library/react
+yarn add -D ts-node
+yarn add -D jest-environment-jsdom
+yarn add -D autoprefixer
+yarn add -D jest-environment-jsdom
+
+
+
+1.1. Delete this code line from you package.json file 
+
+  "type": "module", 
+
 
 2. Create jest.config.ts whith this configuration
 
@@ -142,6 +154,12 @@ module.exports = {
       autoprefixer: {},
     },
   };
+
+5. Delete these tailwindcss lines from vite.config.ts
+
+import tailwindcss from '@tailwindcss/vite';
+plugins: [react(), tailwindcss()],
+
 
 EXTRA: Usefull commands
 
