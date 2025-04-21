@@ -165,6 +165,7 @@ EXTRA: Usefull commands
 
 yarn jest --clearCache
 touch postcss.config.js
+yarn test ButtomMobile --no-coverage
 rm <ruta-del-archivo>
 
 
@@ -242,3 +243,8 @@ jobs:
 7. Add the token to your Git environment
 
 Settings >  Secrets and variables > Actions > Secrets > SONAR_TOKEN
+
+
+/***************************************/
+MIT License -> https://choosealicense.com/licenses/mit/
+/***************************************/
